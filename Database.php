@@ -23,7 +23,7 @@ class Database {
         $pdo = self::createPDO();
         $sql = 'SELECT * FROM csp;';
 
-        $result = $pdo->query($sql,PDO::FETCH_ASSOC);
+        $result = $pdo->query($sql,PDO::FETCH_NUM);
 
         return $result->fetchAll();
     }
