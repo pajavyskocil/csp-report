@@ -21,7 +21,7 @@ class Database {
     public static function getAll()
     {
         $pdo = self::createPDO();
-        $sql = 'SELECT * FROM csp;';
+        $sql = 'SELECT time,ip,referrer,user_agent,report_blocked_uri,report_disposition,report_document_uri,report_effective_directive,report_original_policy,report_referrer,report_script_sample,report_status_code,report_violated_directive FROM csp;';
 
         $result = $pdo->query($sql,PDO::FETCH_NUM);
 
