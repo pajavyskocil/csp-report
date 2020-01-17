@@ -26,7 +26,7 @@ include('Database.php');
                 data.addColumn('string', 'report_script_sample');
                 data.addColumn('string', 'report_status_code');
                 data.addColumn('string', 'report_violated_directive');
-                data.addRows(JSON.parse("<?php echo htmlspecialchars(json_encode(Database::getAll())); ?>"));
+                data.addRows(<?php echo json_encode(Database::getAll(), JSON_PRETTY_PRINT); ?>);
 
                 var table = new google.visualization.Table(document.getElementById('table_div'));
 
